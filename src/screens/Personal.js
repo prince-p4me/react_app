@@ -9,7 +9,7 @@ const Personal = () => {
   return (
     <div >
       <p>Personal Page</p>
-      <Button navigatePath={Routes.OFFICE} />
+      <Button navigatePath={Routes.OFFICE} btnName={'Next'} />
     </div>
   )
 }
