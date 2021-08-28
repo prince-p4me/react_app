@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Switch, Route, BrowserRouter } from "react-router-dom";
+import Personal from "./screens/Personal";
+import Office from "./screens/Office";
+import Confirmation from "./screens/Confirmation";
+import Success from "./screens/Success";
+import Error from "./screens/Error";
+import Routes from "./utils/Routes";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={Personal} />
+          <Route path={Routes.PERSONAL} component={Personal} />
+          <Route path={Routes.OFFICE} component={Office} />
+          <Route path={Routes.CONFIRMATION} component={Confirmation} />
+          <Route path={Routes.SUCCESS} component={Success} />
+          <Route path={Routes.ERROR} component={Error} />
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }
