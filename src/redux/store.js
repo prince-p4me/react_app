@@ -1,10 +1,7 @@
-import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { createStore, combineReducers } from 'redux';
 import {
   getUser
 } from './reducer';
-import getListSaga from './saga';
-import { all, fork } from 'redux-saga/effects';
-import createSagaMiddleware from 'redux-saga';
 import { persistReducer, persistStore } from 'redux-persist';
 import { AsyncStorage } from 'AsyncStorage';
 
@@ -15,11 +12,6 @@ const rootReducer = combineReducers({
 
 //creating, applying sagas
 
-const sagaMiddleware = createSagaMiddleware();
-
-export function* rootSaga() {
-  yield all([fork(getListSaga)]);
-}
 
 //creating store persist
 const persistConfig = {
@@ -36,12 +28,11 @@ const persistConfig = {
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 //creating store
-let store = createStore(persistedReducer, applyMiddleware(sagaMiddleware));
+let store = createStore(persistedReducer);
 
 //creating persistor
 let persistor = persistStore(store);
 
 //running saga middleware
-sagaMiddleware.run(rootSaga);
 
 export { store, persistor };
