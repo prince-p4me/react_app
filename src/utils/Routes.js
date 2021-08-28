@@ -1,7 +1,7 @@
 export default {
   PERSONAL: "/personal",
   OFFICE: "/office",
-  CONFIRMATION: "confirmation",
+  CONFIRMATION: "/confirmation",
   SUCCESS: "/success",
   ERROR: "/error"
 }
