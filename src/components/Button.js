@@ -2,20 +2,30 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 
-function Button (props){
-    console.log({props:props});
+import { makeStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+
+const useStyles = makeStyles((theme) => ({
+    alignment:{
+        marginTop: '20%',
+        marginLeft: '10%',
+    }
+  }));
+
+function NextButton (props){
+    const classes = useStyles();
     const history = useHistory();
     const handleClick=()=>{
         history.push(props.navigatePath);
     }
     return (
-        <div>
-            <button onClick={()=>{
+        <div className={classes.alignment}>
+            <Button variant="contained" color="secondary" onClick={()=>{
                 handleClick();
-            }}>{props.btnName}</button>
+            }}>{props.btnName}</Button>
         </div>    
     
     )
 }
   
-export default Button;
+export default NextButton;

@@ -29,8 +29,9 @@
   background: white;
   flex: 1;
   border-radius: 7%;
-  min-height: 70%;
-}
+  /* min-height: 70%; */
+  border-style: dotted;
+  height: 400px;}
 
 .MuiToolbar-regular {
   justify-content: space-between;
