@@ -20,18 +20,52 @@
   flex: 1;
   justify-content: center;
   /* align-items: center; */
-  padding: 15%;
-  background-color: tomato;
+  padding: 30px 10%;
+  /* background-color: tomato; */
 }
 
 .box{
   display: flex;
   background: white;
   flex: 1;
-  border-radius: 7%;
-  /* min-height: 70%; */
+  border-radius: 15%;
+  min-height: 70vh;
   border-style: dotted;
-  height: 400px;}
+  height: 400px;
+  border-width: 2px;
+}
+
+.MuiInput-underline:before {
+  display: none;
+}
+
+/* .MuiInput-underline:hover:not(.Mui-disabled):before {
+  border-bottom: 2px solid yellow;
+} */
+label + .MuiInput-formControl{
+  border: 1px solid black;
+  border-radius: 5px;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+.MuiInputLabel-animated{
+  display: none !important;
+  margin-left: 8px;
+}
+.makeStyles-root-1,.makeStyles-root-12{
+  margin-top: calc(7%);
+}
+
+.MuiInput-underline:after {
+  border-bottom: 2px solid yellow !important;
+  display: none;
+}
+
+.makeStyles-labelAlignment-10{
+  text-align: right;
+  margin-right: 6% !important;
+}
 
 .MuiToolbar-regular {
   justify-content: space-between;
