@@ -11,7 +11,7 @@ import Stepper from "../components/Stepper";
 
 import { makeStyles } from '@material-ui/core/styles';
 import TextInputContainer from "../components/TextInputContainer";
-
+import Header from "../components/Header";
 const useStyles = makeStyles((theme) => ({
   root: {
     '& > *': {
@@ -19,12 +19,12 @@ const useStyles = makeStyles((theme) => ({
       width: '40ch',
     },
   },
-  formRow:{
-    display:'flex',
-    flexDirection:'row',
-    alignItems:'center',
+  formRow: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
   },
-  labelAlignment:{
+  labelAlignment: {
     marginRight: '10px',
     marginTop: '10px',
   }
@@ -34,45 +34,23 @@ const useStyles = makeStyles((theme) => ({
 const Offical = () => {
   const classes = useStyles();
 
-  const Header = () => {
-    return (
-      <div className="header">
-        <Typography className="title1"> Office Details</Typography>
-        <Stepper />
-        <AppBar>
-          <Toolbar>
-            <IconButton edge="start" color="inherit" aria-label="menu">
-              <MenuIcon />
-            </IconButton>
-            <Typography variant="h6" >
-              User
-            </Typography>
-          </Toolbar>
-        </AppBar>
-      </div>
-    )
-  }
-
   return (
     <div className="container">
       <Header />
       <div className="section">
         <div className="box">
-
-          {/* <p>Personal Page</p> */}
-          {/* <CustomeButton navigatePath={Routes.OFFICE} btnName={'Next'} /> */}
-          <Grid container justify = "center">
-              <form className={classes.root} noValidate autoComplete="off">
-                  <TextInputContainer label="Building Name" />
-                  <TextInputContainer label="City/Area" />
-                  <TextInputContainer label="Landline Number" />
-                  <TextInputContainer label="Address Line 1" />
-                  <TextInputContainer label="Address Line 2" />
-                  <TextInputContainer label="PO Box Number" />
-              </form>
-              <NextButton navigatePath={Routes.CONFIRMATION} btnName={'Next'} /> 
+          <Grid container justify="center">
+            <form className={classes.root} noValidate autoComplete="off">
+              <TextInputContainer label="Building Name" />
+              <TextInputContainer label="City/Area" />
+              <TextInputContainer label="Landline Number" />
+              <TextInputContainer label="Address Line 1" />
+              <TextInputContainer label="Address Line 2" />
+              <TextInputContainer label="PO Box Number" />
+            </form>
+            <NextButton navigatePath={Routes.CONFIRMATION} btnName={'Next'} />
           </Grid>
-          
+
         </div>
       </div>
     </div>
