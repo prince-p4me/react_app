@@ -1,5 +1,124 @@
 .App {
   text-align: center;
+  /* flex: 1; */
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color:rgb(245, 245, 245);
+}
+
+.container{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+
+.section{
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  /* align-items: center; */
+  padding: 15%;
+  background-color: tomato;
+}
+
+.box{
+  display: flex;
+  background: white;
+  flex: 1;
+  border-radius: 7%;
+  min-height: 70%;
+}
+
+.MuiToolbar-regular {
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  min-height: 50px !important;
+}
+
+.MuiAppBar-colorPrimary {
+    background-color:rgb(218,56,50) !important;
+    width: 300px !important;
+    border-bottom-left-radius: 20px;
+}
+.MuiAppBar-positionFixed{
+  position: relative !important;
+}
+
+.MuiAppBar-root{
+  height: min-content;
+}
+
+.MuiStepper-horizontal{
+  padding: 24px 24px 10px !important;
+}
+
+.MuiStepIcon-root{
+  color: rgb(245, 245, 245) !important;
+}
+
+.MuiStepIcon-root.MuiStepIcon-active {
+  color: rgb(218,56,50) !important;
+}
+
+svg.MuiStepIcon-root{
+  border-width: 2px !important;
+  border-color: rgba(218,56,50,.70);
+}
+
+text.MuiStepIcon-text{
+  fill: rgba(0, 0, 0, 0.30);
+}
+
+.MuiStepIcon-root.MuiStepIcon-active> text.MuiStepIcon-text{
+  fill: whitesmoke ;
+}
+
+span.MuiStepLabel-iconContainer{
+  position: relative;
+}
+
+span.MuiStepLabel-iconContainer::before{
+  content: "";
+  background-color: rgb(218,56,50) !important;
+  width: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.MuiStepConnector-line {
+  border-color:rgba(218,56,50,.70) !important;
+  width: 65%;
+  margin-left: 17%;
+}
+
+.header{
+  height: 100px;
+  width: 100%;
+  display: inline-flex;
+  background-color: white;
+  flex-direction: row;
+}
+
+
+
+.header > p.MuiTypography-body1{
+  width: 170px !important;
+}
+
+.title1{
+  /* float: left; */
+  margin: 30px !important;
+}
+
+.header-panel{
+  flex: 1;
+  width: 100%;
+  height: fit-content;
+  background-color: royalblue;
 }
 
 .App-logo {
