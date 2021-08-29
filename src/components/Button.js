@@ -12,7 +12,7 @@ function Button (props){
         <div>
             <button onClick={()=>{
                 handleClick();
-            }}>Next</button>
+            }}>{props.btnName}</button>
         </div>    
     
     )

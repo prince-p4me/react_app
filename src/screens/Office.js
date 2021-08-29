@@ -8,7 +8,7 @@ const Official = () => {
     <div >
       <p>Official Page</p>
 
-      <Button navigatePath={Routes.CONFIRMATION} />
+      <Button navigatePath={Routes.CONFIRMATION} btnName={'Next'} />
     </div>
   )
 }

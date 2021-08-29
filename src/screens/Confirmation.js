@@ -8,7 +8,7 @@ const Confirmation = () => {
     <div >
       <p>Confirmation Page</p>
 
-      <Button navigatePath={Routes.SUCCESS} />
+      <Button navigatePath={Routes.SUCCESS} btnName={'Next'} />
     </div>
   )
 }
