@@ -11,15 +11,16 @@ import Stepper from "../components/Stepper";
 
 import { makeStyles } from '@material-ui/core/styles';
 import TextInputContainer from "../components/TextInputContainer";
+import Header from "../components/Header";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
-  formRow:{
-    display:'flex',
-    flexDirection:'row',
-    alignItems:'center',
+  formRow: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
   },
 
   paper: {
@@ -33,24 +34,6 @@ const useStyles = makeStyles((theme) => ({
 const Confirmation = () => {
   const classes = useStyles();
 
-  const Header = () => {
-    return (
-      <div className="header">
-        <Typography className="title1"> Confirmation Page</Typography>
-        <Stepper />
-        <AppBar>
-          <Toolbar>
-            <IconButton edge="start" color="inherit" aria-label="menu">
-              <MenuIcon />
-            </IconButton>
-            <Typography variant="h6" >
-              User
-            </Typography>
-          </Toolbar>
-        </AppBar>
-      </div>
-    )
-  }
   function FormRow() {
     return (
       <React.Fragment>
@@ -72,7 +55,7 @@ const Confirmation = () => {
       <div className="section">
         <div className="box">
 
-         <div className={classes.root}>
+          <div className={classes.root}>
             <Grid container spacing={1}>
               <Grid container item xs={12} spacing={3}>
                 <FormRow />
@@ -86,7 +69,7 @@ const Confirmation = () => {
             </Grid>
           </div>
 
-          
+
         </div>
       </div>
     </div>

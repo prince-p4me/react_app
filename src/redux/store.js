@@ -1,13 +1,13 @@
 import { createStore, combineReducers } from 'redux';
 import {
-  getUser
+  getRoute
 } from './reducer';
 import { persistReducer, persistStore } from 'redux-persist';
 import { AsyncStorage } from 'AsyncStorage';
 
 // creating reducers
 const rootReducer = combineReducers({
-  getUser
+  getRoute
 });
 
 //creating, applying sagas
@@ -20,7 +20,7 @@ const persistConfig = {
   // Storage Method (React Native)
   storage: AsyncStorage,
   // Whitelist (Save Specific Reducers)
-  whitelist: ['getUser'],
+  whitelist: ['getRoute'],
   blacklist: [],
   throttle: 1000,
   debounce: 1000,

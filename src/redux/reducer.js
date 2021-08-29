@@ -1,8 +1,8 @@
 import * as Types from './types';
 
-export const getUser = (state = {}, action) => {
+export const getRoute = (state = "/", action) => {
   switch (action.type) {
-    case Types.USER:
+    case Types.ROUTE_NAME:
       return action.payload;
     default:
       return state;

@@ -8,13 +8,26 @@ import "../App.css";
 import { AppBar, Paper, Grid, Toolbar, IconButton, Typography, Button } from '@material-ui/core';
 import MenuIcon from "@material-ui/icons/Menu";
 import Stepper from "./Stepper";
-
+import { useHistory } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 
 const Header = () => {
+  const history = useHistory();
+
+  const getContent = () => {
+    switch (history.location.pathname) {
+      case Routes.PERSONAL:
+        return "Personal Info";
+      case Routes.OFFICE:
+        return "Office Details";
+      case Routes.CONFIRMATION:
+        return "Confirmation Page";
+    }
+  }
+
   return (
     <div className="header">
-      <Typography className="title1"> Personal Info</Typography>
+      <Typography className="title1"> {getContent()}</Typography>
       <Stepper />
       <AppBar>
         <Toolbar>

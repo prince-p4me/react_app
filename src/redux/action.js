@@ -1,8 +1,8 @@
 import * as Types from './types';
 
-export function doLogin(payload) {
+export function setRoute(payload) {
   return {
-    type: Types.DO_LOGIN,
+    type: Types.ROUTE_NAME,
     payload,
   };
 }
